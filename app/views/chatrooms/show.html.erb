@@ -4,14 +4,19 @@
 </p>
 
 <div data-behavior="messages">
-  <% 1.upto(500) do %>
-    <div><strong>Bruce Valetine</strong>Hello World</div>
+  <% @messages.each do |message| %>
+    <div><strong><%= message.user.username %></strong><%= message.body %></div>
   <% end %>
 </div>
 
 <div class="chat-message">
-  <%= simple_form_for [@chatroom, Message.new] do |f| %>
-    <%= f.input :body, as: :string, placeholder:"type your message", class:"placeholder-message", label: false %>
+  <%= simple_form_for [@chatroom, Message.new], remotre: true do |f| %>
+    <%= f.input :body, as: :string, placeholder:"type your message", autofocus: true, label: false %>
     <%= f.button :submit, class: "btn-send", style: "width: 200px;"%>
   <% end %>
   </div>
+
+
+<%# 1.upto(500) do %>
+    <!-- <div><strong>Bruce Valetine</strong>Hello World</div> -->
+  <%# end %>

@@ -1,2 +1,5 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).on "turbolinks:load", ->
+  $(#new_message).on "keypress", (e) ->
+    if e && e.keycode == 13
+      e.preventDefault()
+        $(this).submit()
