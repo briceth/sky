@@ -17,6 +17,9 @@
         <td><%= link_to 'Show', chatroom %></td>
         <td><%= link_to 'Edit', edit_chatroom_path(chatroom) %></td>
         <td><%= link_to 'Destroy', chatroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'join', chatroom_chatroom_users_path(chatroom), method: :post %></td> <!-- method post car action create dans le controller -->
+        <td><%= link_to 'leave', chatroom_chatroom_users_path(chatroom), method: :delete %></td> <!-- method post car action create dans le controller -->
+
       </tr>
     <% end %>
   </tbody>
