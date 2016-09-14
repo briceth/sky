@@ -3,20 +3,18 @@
   <%= @chatroom.name %>
 </p>
 
-<div data-behavior="messages">
+<% unread_messages = false %>
+<div data-behavior='messages' data-chatroom-id='<%= @chatroom.id %>'>
   <% @messages.each do |message| %>
-    <div><strong><%= message.user.username %></strong><%= message.body %></div>
+    <% if !unread_messages && @chatroom_user.last_read_at < message.created_at %>
+      <% unread_messages = true %>
+      <div class="strike"><span>Unread Messages</span></div>
+    <% end %>
+
+    <%= render message %>
   <% end %>
 </div>
 
-<div class="chat-message">
-  <%= simple_form_for [@chatroom, Message.new], remotre: true do |f| %>
-    <%= f.input :body, as: :string, placeholder:"type your message", autofocus: true, label: false %>
-    <%= f.button :submit, class: "btn-send", style: "width: 200px;"%>
-  <% end %>
-  </div>
-
-
-<%# 1.upto(500) do %>
-    <!-- <div><strong>Bruce Valetine</strong>Hello World</div> -->
-  <%# end %>
+<%= form_for [@chatroom, Message.new] do |f| %>
+  <%= f.text_area :body, rows: 1, class: "form-control", autofocus: true %>
+<% end %>
