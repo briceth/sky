@@ -18,4 +18,5 @@ class ChatroomUsersController < ApplicationController
     def set_chatroom
       @chatroom = Chatroom.find(params[:chatroom_id])
     end
+
 end
