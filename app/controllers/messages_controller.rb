@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_chatroom
+  before_action :set_chatroom, only: [:create]
 
   def create
     message = @chatroom.messages.new(message_params)

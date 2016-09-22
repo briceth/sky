@@ -9,7 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise', github: 'plataformatec/devise'
 gem 'redis'
 gem 'devise-bootstrap-views', '~> 0.0.8'
-
+gem 'turbolinks', '~> 5'
 
 gem 'sass-rails'
 gem 'jquery-rails'

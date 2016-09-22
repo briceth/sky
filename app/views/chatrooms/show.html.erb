@@ -15,7 +15,9 @@
 </div>
 
 <div class="chat-message">
-  <%= simple_form_for [@chatroom, Message.new], remotre: true do |f| %>
+  <%= simple_form_for [@chatroom, Message.new], remote: true do |f| %>
+  <!-- to resolve the authenticity token qui deconne -->
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= f.input :body, as: :string, placeholder:"type your message", autofocus: true, label: false %>
     <%= f.button :submit, class: "btn-send", style: "width: 200px;"%>
   <% end %>
