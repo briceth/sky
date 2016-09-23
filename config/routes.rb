@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :messages
   end
 
+  post 'join' => 'chatrooms#create'
+
   root to: "chatrooms#index"
 end
 
