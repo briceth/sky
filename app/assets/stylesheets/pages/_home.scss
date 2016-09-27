@@ -1,4 +1,24 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.fluid-containe {
+  background-color: #F9F7F7;
+}
+.col-sm-2 {
+  font-weight: bolder;
+  background-color: #DBE2EF;
+  height: 100vh;
+}
+
+.col-sm-2 a {
+  color:white;
+  text-decoration: none;
+}a:hover {
+  text-decoration: none;
+}
+
+.col-sm-2 li {
+  list-style: none;
+  margin-top: 26px;
+}
+
+h5 {
+  font-weight: bolder;
+}
