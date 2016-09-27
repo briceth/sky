@@ -84,4 +84,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #need to set the cable server's URI for production.
+  config.web_socket_server_url = "wss://sky-development.herokuapp.com/cable"
+
+  # Action Cable can only accept WebSocket requests from specified origins.
+  # We need to pass those origins to the Action Cable server's configuration as an array.
+  config.action_cable.allowed_request_origins = ['https://sky-development.herokuapp.com', 'http://sky-development.herokuapp.com']
 end
