@@ -19,6 +19,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'omniauth-facebook'
+gem 'pry-byebug'
 
 group :development, :test do
   gem 'binding_of_caller'
