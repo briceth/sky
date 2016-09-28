@@ -7,4 +7,4 @@ test:
 
 production:
   adapter: redis
-  url: redis://rediscloud:CWCmHZKQTvDaguoO@pub-redis-14360.eu-west-1-1.1.ec2.garantiadata.com:14360
+  url: redis://redistogo:087830ba23b37a29dcab4066ae4098d6@porgy.redistogo.com:9893/
