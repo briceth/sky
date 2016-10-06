@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :messages
   end
 
+  resources :direct_messages
+
   post 'join' => 'chatrooms#create'
 
   root to: "chatrooms#index"

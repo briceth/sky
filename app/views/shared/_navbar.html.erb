@@ -1,9 +1,27 @@
 <div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%#= image_tag "logo.png" %>
-    <h1>sky</h1>
-  <% end %>
+  <div class="logo hidden-xs">
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%#= image_tag "logo.png" %>
+      <h1>sky</h1>
+    <% end %>
+  </div>
+
+  <div class="logo visible-xs">
+    <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Chatrooms
+    <span class="caret"></span>
+  </button>
+    <% if user_signed_in? %>
+      <% current_user.chatrooms.each do |chatroom| %>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><%= link_to chatroom.name, chatroom, data: {behavior: "chatroom-link", chatroom_id: chatroom.id} %></li>
+      </ul>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
