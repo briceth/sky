@@ -1,0 +1,31 @@
+#chatroom {
+  margin-left: 1em;
+}
+.discussion {
+  height: 175px;
+  width: 25%;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  // background-size: cover !important;
+  position: relative;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.btn-chatroom {
+  position: absolute;
+  bottom: 3px;
+}
+#join {
+  left: 2px;
+}
+#edit {
+  left: 60px;
+}
+#leave {
+  right:90px
+}
+#destroy {
+  right: 2px
+}
