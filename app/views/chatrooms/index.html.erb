@@ -1,16 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Chatrooms</h1>
+<!-- <h1>Chatrooms</h1> -->
   <div id="chatroom">
     <% @chatrooms.each do |chatroom| %>
-      <div class="discussion">
-        <div id="name"><%= chatroom.name %></div>
-        <div id="edit" class="btn-chatroom"><%= link_to 'Edit', edit_chatroom_path(chatroom) %></div>
-        <div id="destroy" class="btn-chatroom"><%= link_to 'Destroy', chatroom, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        <div id="join" class="btn-chatroom"><%= link_to "Join", chatroom_chatroom_users_path(chatroom), method: :post %></div>
-        <div id="leave" class="btn-chatroom"><%= link_to "Leave", chatroom_chatroom_users_path(chatroom), method: :delete %></div>
+      <div class="col-xs-12 col-md-2 col-md-offset-2">
+        <div class="discussion">
+          <div id="name"><%= chatroom.name %></div>
+          <div id="edit" class="btn-chatroom"><%= link_to 'Edit', edit_chatroom_path(chatroom) %></div>
+          <div id="destroy" class="btn-chatroom"><%= link_to 'Destroy', chatroom, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <div id="join" class="btn-chatroom"><%= link_to "Join", chatroom_chatroom_users_path(chatroom), method: :post %></div>
+          <div id="leave" class="btn-chatroom"><%= link_to "Leave", chatroom_chatroom_users_path(chatroom), method: :delete %></div>
+        </div>
       </div>
       <% end %>
-  </div>
+    </div>
 <br>
 <%= link_to 'New Chatroom', new_chatroom_path %>

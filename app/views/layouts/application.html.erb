@@ -15,7 +15,7 @@
 
     <div class="fluid-container" style="margin-top: 75px;">
       <div class="row">
-        <div class="col-sm-2 hidden-xs nav-left" style="position: fixed; top: 70px; left: 0;">
+        <div class="sidebar hidden-xs nav-left" style="position: fixed; top: 70px; left: 0;">
         <% if user_signed_in? %>
           <h4>Chatrooms</h4>
           <% current_user.chatrooms.public_channels.each do |chatroom| %>
@@ -30,12 +30,8 @@
           </ul>
           <% end %>
         <% end %>
-
         </div>
-        <div class="col-xs-12 col-sm-10 col-sm-offset-2">
           <%= yield %>
-
-        </div>
       </div>
     </div>
     <%= javascript_include_tag 'application' %>
