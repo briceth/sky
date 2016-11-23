@@ -15,7 +15,7 @@
 
     <div class="fluid-container" style="margin-top: 75px;">
       <div class="row">
-        <div class="col-sm-2 hidden-xs" style="position: fixed; top: 70px; left: 0;">
+        <div class="col-sm-2 hidden-xs nav-right" style="position: fixed; top: 70px; left: 0;">
         <% if user_signed_in? %>
           <h5>Chatrooms</h5>
           <% current_user.chatrooms.public_channels.each do |chatroom| %>
