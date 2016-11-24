@@ -41,3 +41,14 @@
     width: 300px;
   }
 }
+@media(min-width: 500px){
+  #chatroom {
+    width: 400px;
+  }
+}
+
+@media(min-width: 700px){
+  #chatroom {
+    width: 100%;
+  }
+}
