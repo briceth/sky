@@ -35,3 +35,9 @@
   bottom: 10px;
   left: 200px;
 }
+
+@media(min-width: 320px){
+  #chatroom {
+    width: 300px;
+  }
+}
