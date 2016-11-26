@@ -26,7 +26,7 @@
           <h4>Users</h4>
           <% (User.all - [current_user]).each do |user| %>
           <ul>
-            <li><%= link_to user.email, direct_message_path(user.id), data: {behavior: "chatroom-link", chatroom_id: Chatroom.direct_message_for_users([current_user, user]).id } %></li>
+            <li><%= link_to user.name || user.email, direct_message_path(user.id), data: {behavior: "chatroom-link", chatroom_id: Chatroom.direct_message_for_users([current_user, user]).id } %></li>
           </ul>
           <% end %>
         <% end %>
